@@ -173,4 +173,5 @@ MIT — Free to use and adapt.
 ## 👤 Author
 
 **Manicharan Ravi** — IT Specialist & Cloud Engineer  
-📍 Mainz, Germany | ☁️ AWS · Azure · GCP · Terraform · Security
+📍 Mainz, Germany | ☁️ AWS · Azure · GCP · Terraform · Security  
+🌐 [Portfolio](https://manicharan0485.github.io) · [LinkedIn](https://linkedin.com/in/manicharan-ravi)
