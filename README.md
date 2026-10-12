@@ -37,38 +37,22 @@ cloud-security-hardening/
 │   │   │   ├── iam-hardening/        # Password policy, root MFA, access keys
 │   │   │   └── s3-security/          # Block public access, encryption, logging
 │   │   └── environments/
-│   │       ├── dev/
-│   │       └── prod/
+│   │       └── prod/                 # main.tf + terraform.tfvars.example
 │   ├── azure/
 │   │   ├── modules/
 │   │   │   ├── defender/             # Defender for Cloud plans
-│   │   │   ├── policy/               # CIS policy initiative
 │   │   │   └── key-vault/            # Soft delete, purge protection, RBAC
-│   │   └── environments/
 │   └── gcp/
-│       ├── modules/
-│       │   ├── scc/                  # Security Command Center
-│       │   ├── iam/                  # Org-level IAM constraints
-│       │   └── vpc-sc/               # VPC Service Controls
-│       └── environments/
+│       └── modules/
+│           └── scc/                  # Security Command Center
 │
 ├── scripts/
 │   ├── python/
 │   │   ├── cis_benchmark_checker.py  # Multi-cloud CIS compliance scanner
 │   │   ├── cost_optimizer.py         # Idle resource + savings report
-│   │   └── secrets_scanner.py        # Detect hardcoded secrets in repos/S3
+│   │   └── requirements.txt
 │   └── bash/
-│       ├── aws_baseline.sh           # One-shot AWS account hardening
-│       └── gcp_baseline.sh           # One-shot GCP project hardening
-│
-├── compliance/
-│   ├── cis-aws/                      # CIS AWS Foundations Benchmark mapping
-│   └── cis-azure/                    # CIS Azure Foundations Benchmark mapping
-│
-└── docs/
-    ├── ARCHITECTURE.md
-    ├── SETUP.md
-    └── RUNBOOK.md
+│       └── aws_baseline.sh           # One-shot AWS account hardening
 ```
 
 ---
@@ -95,21 +79,9 @@ This enables:
 - ✅ IAM password policy (14 char min, MFA required)
 - ✅ Root account MFA check
 
-### Azure Hardening
+### Azure and GCP modules
 
-```bash
-cd terraform/azure/environments/prod
-az login
-terraform init && terraform apply
-```
-
-### GCP Hardening
-
-```bash
-cd terraform/gcp/environments/prod
-gcloud auth application-default login
-terraform init && terraform apply
-```
+The Azure modules (`terraform/azure/modules/defender`, `terraform/azure/modules/key-vault`) and the GCP module (`terraform/gcp/modules/scc`) are reusable building blocks. Reference them from your own root module, then run `terraform init && terraform apply` after `az login` or `gcloud auth application-default login`.
 
 ---
 
