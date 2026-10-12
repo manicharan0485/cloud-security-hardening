@@ -1,0 +1,34 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfstate.lock.info
+.terraform.lock.hcl
+terraform.tfvars
+override.tf
+override.tf.json
+
+# AWS credentials — NEVER commit
+.aws/
+credentials
+*.pem
+*.key
+
+# Reports (generated output)
+reports/
+*.html
+*_report_*.json
+*_report_*.csv
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db

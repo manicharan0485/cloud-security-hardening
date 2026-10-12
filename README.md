@@ -20,7 +20,7 @@
 | **Azure** | Microsoft Defender for Cloud, Azure Policy (CIS), Key Vault hardening, NSG audit |
 | **GCP** | Security Command Center, Org Policy constraints, VPC Service Controls, IAM audit |
 
-**Key achievement:** Automated hardening that reduced cloud security posture score by 40%+ and cut manual audit time from days to minutes.
+**Key achievement:** Automated hardening that improved the cloud security posture score by 40%+ and cut manual audit time from days to minutes.
 
 ---
 

@@ -1,0 +1,13 @@
+# Copy to terraform.tfvars and fill in your values
+# NEVER commit terraform.tfvars to git
+
+prefix      = "mycompany"
+region      = "eu-central-1"
+alert_email = "security-alerts@mycompany.de"
+kms_key_arn = "arn:aws:kms:eu-central-1:123456789012:key/your-key-id"
+
+s3_buckets_to_harden = [
+  "mycompany-data-prod",
+  "mycompany-logs-prod",
+  "mycompany-backups-prod"
+]
