@@ -1,7 +1,9 @@
 # ☁️ Cloud Security Hardening
 
 > **Multi-cloud security automation for AWS, Azure, and GCP.**  
-> Terraform modules + Python scripts to enforce CIS Benchmarks, enable security services, and detect misconfigurations — production-ready from day one.
+> Terraform modules + Python scripts to enforce CIS Benchmarks, enable security services, and detect misconfigurations.
+
+> 🧪 **Reference / lab project.** Original practice code written to demonstrate the approach. It is not taken from an employer's codebase. Review and adapt before using it in your own environment.
 
 ![Terraform](https://img.shields.io/badge/Terraform-7B42BC?style=flat&logo=terraform&logoColor=white)
 ![AWS](https://img.shields.io/badge/AWS-FF9900?style=flat&logo=amazonaws&logoColor=white)
@@ -19,8 +21,6 @@
 | **AWS** | Security Hub (CIS v1.4), GuardDuty, CloudTrail, S3 Block Public Access, IAM Password Policy, Root MFA |
 | **Azure** | Microsoft Defender for Cloud, Azure Policy (CIS), Key Vault hardening, NSG audit |
 | **GCP** | Security Command Center, Org Policy constraints, VPC Service Controls, IAM audit |
-
-**Key achievement:** Automated hardening that improved the cloud security posture score by 40%+ and cut manual audit time from days to minutes.
 
 ---
 
@@ -172,5 +172,5 @@ MIT — Free to use and adapt.
 
 ## 👤 Author
 
-**Manicharan Ravi** — Cloud Security Engineer  
+**Manicharan Ravi** — IT Specialist & Cloud Engineer  
 📍 Mainz, Germany | ☁️ AWS · Azure · GCP · Terraform · Security
